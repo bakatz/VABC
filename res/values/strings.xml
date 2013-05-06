@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string translatable="false" name="app_name">VABC</string>
+    <string translatable="false" name="about_name">About VABC</string>
+    <string translatable="false" name="action_settings">Settings</string>
+    <string translatable="false" name="action_settings_about">About VABC</string>
+    <string translatable="false" name="map_api_key">AIzaSyBXEVtJu6H6issGtClZltXeIqm05tiwfMU</string>
+    <string translatable="false" name="icon">Drink</string>
+    <string translatable="false" name="about_text">VABC stands for <b>V</b>irginia <b>ABC</b> Store Information.\nThis app allows you to select, filter, and search for drinks, as well as to find all ABC store locations in Virginia via the Locations tab. This is not an official Virginia ABC app, nor is this app affiliated with the aforementioned organization.\n\n
+        VABC version: 1.0.2\n
+        All coding and graphics by <a href="http://bakatz.com">Ben Katz</a>\n
+        All data is public domain, retreived from <a href="http://www.abc.virginia.gov">http://www.abc.virginia.gov</a>\n
+        Backend hosting kindly provided by <a href="http://ehotinger.com">Eric Hotinger</a></string>
+
+    <string-array translatable="false" name="drink_types_array">
+        <item>(All Types)</item>
+        <item>Vodka</item>
+        <item>Tequila</item>
+        <item>Specialty</item>
+        <item>Whiskey</item>
+        <item>Rum</item>
+        <item>Rock-Rye</item>
+        <item>Gin</item>
+        <item>Eggnog</item>
+        <item>Cognac</item>
+        <item>Cocktails</item>
+        <item>Brandy</item>
+        <item>Moonshine</item>
+        <item>Bourbon</item>
+        <item>Vermouth</item>
+    </string-array>
+    <string-array translatable="false" name="drink_sizes_array">
+        <item>(All Sizes)</item>
+        <item>Handle (1.75L)</item>
+        <item>1L</item>
+        <item>Fifth (750mL)</item>
+        <item>375mL</item>
+        <item>50mL</item>
+    </string-array>
+    <string-array translatable="false" name="drink_sort_types_array">
+        <item>Best Value</item>
+        <item>Price</item>
+        <item>Size</item>
+        <item>ABV</item>
+        <item>Age</item>
+        <item>Name</item>
+        <item>Category Name</item>
+    </string-array>
+
+</resources>
