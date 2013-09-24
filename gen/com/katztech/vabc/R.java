@@ -1100,9 +1100,9 @@ containing a value of this type.
         public static final int edit_query=0x7f04002b;
         public static final int filters_layout=0x7f04003b;
         public static final int filters_layout_2=0x7f04003e;
+        public static final int headerText=0x7f040038;
         public static final int homeAsUp=0x7f04000a;
         public static final int hybrid=0x7f040004;
-        public static final int icon=0x7f040038;
         public static final int label=0x7f040039;
         public static final int listMode=0x7f040006;
         public static final int map_placeholder=0x7f040041;
@@ -1272,7 +1272,7 @@ containing a value of this type.
         find the service-side assets. [CHAR LIMIT=25] 
          */
         public static final int common_signin_button_text_long=0x7f05000d;
-        public static final int icon=0x7f050025;
+        public static final int header=0x7f050025;
         public static final int map_api_key=0x7f050024;
     }
     public static final class style {

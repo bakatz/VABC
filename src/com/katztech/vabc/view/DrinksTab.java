@@ -208,21 +208,23 @@ public class DrinksTab extends SherlockListFragment {
 		@Override
 		public View getView(int position, View convertView, ViewGroup parent) {
 			View row = super.getView(position, convertView, parent);
-			ImageView icon = (ImageView) row.findViewById(R.id.icon);
+			TextView headerText = (TextView)row.findViewById(R.id.headerText);
+			//ImageView icon = (ImageView) row.findViewById(R.id.icon);
 
 			// TODO: set icon based on what type of drink it is
-			icon.setImageResource(R.drawable.ic_launcher);
+			//icon.setImageResource(R.drawable.ic_launcher);
 			TextView size = (TextView) row.findViewById(R.id.size);
 			if (this.getItem(position) != LOADING_DRINK) {
 				Drink d = this.getItem(position);
+				
 				String age = d.getAge() <= 0 ? "" : "aged "
 						+ Integer.toString(d.getAge()) + " years,";
 				String catCapped = d.getCategory().substring(0, 1)
 						.toUpperCase(Locale.US)
 						+ d.getCategory().substring(1);
+				headerText.setText(catCapped.substring(0, 2));
 				size.setText(catCapped + ", " + age + " " + d.getNumML()
-						+ " mL, " + d.getAbvPct() + "% ABV " + " at "
-						+ new DecimalFormat("$0.00").format(d.getPrice()));
+						+ " mL, " + d.getAbvPct() + "% ABV, " + new DecimalFormat("0.000").format(d.computeQuality()) + " value rating");
 
 			}
 			return (row);

@@ -311,9 +311,9 @@ int id drink_type_spinner 0x7f04003f
 int id edit_query 0x7f04002b
 int id filters_layout 0x7f04003b
 int id filters_layout_2 0x7f04003e
+int id headerText 0x7f040038
 int id homeAsUp 0x7f04000a
 int id hybrid 0x7f040004
-int id icon 0x7f040038
 int id label 0x7f040039
 int id listMode 0x7f040006
 int id map_placeholder 0x7f040041
@@ -400,7 +400,7 @@ int string common_google_play_services_update_button 0x7f05000c
 int string common_google_play_services_update_text 0x7f050008
 int string common_google_play_services_update_title 0x7f050007
 int string common_signin_button_text_long 0x7f05000d
-int string icon 0x7f050025
+int string header 0x7f050025
 int string map_api_key 0x7f050024
 int style AppBaseTheme 0x7f0a0059
 int style AppTheme 0x7f0a005a

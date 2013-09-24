@@ -1,5 +1,9 @@
 package com.katztech.vabc.model;
 
+import java.text.DecimalFormat;
+
+import android.R;
+
 public class Drink implements Comparable<Drink> {
 	private String displayName;
 	private double numML;
@@ -10,12 +14,9 @@ public class Drink implements Comparable<Drink> {
 	private int containerType;
 	private int age;
 
-	public final static int CAN_CONTAINER_TYPE = 0;
-	public final static int BOTTLE_CONTAINER_TYPE = 1;
-	
 	@Override
 	public String toString() {
-		return displayName;
+		return displayName + " - " + new DecimalFormat("'$'0.00").format(price);
 	}
 
 	@Override
@@ -75,12 +76,13 @@ public class Drink implements Comparable<Drink> {
 			return false;
 		return true;
 	}
-	
+
 	public Drink(String displayName) {
 		this.displayName = displayName;
 	}
 
-	public Drink(String displayName, double numML, double abvPct, int quantity, double price, String category, int age, int containerType) {
+	public Drink(String displayName, double numML, double abvPct, int quantity,
+			double price, String category, int age, int containerType) {
 		this.setDisplayName(displayName);
 		this.setAbvPct(abvPct);
 		this.setPrice(price);
@@ -91,23 +93,23 @@ public class Drink implements Comparable<Drink> {
 	}
 
 	public static double computeABVFromProof(double proof) {
-		return (4.0/7.0)*proof;
+		return (4.0 / 7.0) * proof;
 	}
-	
+
 	public static double ozToML(double oz) {
-		return 29.5735*oz; // 1 oz is 29.5735 ml
+		return 29.5735 * oz; // 1 oz is 29.5735 ml
 	}
-	
+
 	public static double LToML(double L) {
 		return 1000.0 * L;
 	}
-	
+
 	public static double QTToML(double qt) {
 		return 946.353 * qt;
 	}
-	
+
 	public double computeQuality() {
-		return (quantity * numML * (abvPct/100.0)) / price;
+		return (quantity * numML * (abvPct / 100.0)) / price;
 	}
 
 	public double getAbvPct() {
@@ -160,9 +162,9 @@ public class Drink implements Comparable<Drink> {
 
 	@Override
 	public int compareTo(Drink other) {
-		if(computeQuality() < other.computeQuality()) {
+		if (computeQuality() < other.computeQuality()) {
 			return 1;
-		} else if(computeQuality() > other.computeQuality()) {
+		} else if (computeQuality() > other.computeQuality()) {
 			return -1;
 		} else {
 			return 0;
