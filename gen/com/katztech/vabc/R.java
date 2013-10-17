@@ -1091,30 +1091,44 @@ containing a value of this type.
         public static final int abs__title=0x7f04001f;
         public static final int abs__titleDivider=0x7f040020;
         public static final int abs__up=0x7f04000f;
-        public static final int action_settings=0x7f040042;
-        public static final int action_settings_about=0x7f040043;
+        public static final int action_settings=0x7f040050;
+        public static final int action_settings_about=0x7f040051;
+        public static final int address_layout=0x7f040039;
+        public static final int callButton=0x7f040044;
+        public static final int detail_buttons_layout=0x7f040043;
         public static final int disableHome=0x7f04000d;
-        public static final int drink_size_spinner=0x7f04003d;
-        public static final int drink_sort_type_spinner=0x7f04003c;
-        public static final int drink_type_spinner=0x7f04003f;
+        public static final int drink_size_spinner=0x7f04004b;
+        public static final int drink_sort_type_spinner=0x7f04004a;
+        public static final int drink_type_spinner=0x7f04004d;
         public static final int edit_query=0x7f04002b;
-        public static final int filters_layout=0x7f04003b;
-        public static final int filters_layout_2=0x7f04003e;
-        public static final int headerText=0x7f040038;
+        public static final int establishmentAddressLabel=0x7f04003a;
+        public static final int establishmentAddressText=0x7f04003b;
+        public static final int filters_layout=0x7f040049;
+        public static final int filters_layout_2=0x7f04004c;
+        public static final int headerText=0x7f040046;
         public static final int homeAsUp=0x7f04000a;
         public static final int hybrid=0x7f040004;
-        public static final int label=0x7f040039;
+        public static final int infoText=0x7f040042;
+        public static final int label=0x7f040047;
         public static final int listMode=0x7f040006;
-        public static final int map_placeholder=0x7f040041;
+        public static final int map_placeholder=0x7f04004f;
+        public static final int navigateButton=0x7f040045;
         public static final int none=0x7f040000;
         public static final int normal=0x7f040001;
+        public static final int openLabel=0x7f040040;
+        public static final int open_layout=0x7f04003f;
+        public static final int phoneNumberLabel=0x7f04003d;
+        public static final int phoneNumberText=0x7f04003e;
+        public static final int phoneno_layout=0x7f04003c;
         public static final int realtabcontent=0x01010000;
         public static final int satellite=0x7f040002;
-        public static final int search_input=0x7f040040;
+        public static final int search_input=0x7f04004e;
         public static final int showCustom=0x7f04000c;
         public static final int showHome=0x7f040009;
         public static final int showTitle=0x7f04000b;
-        public static final int size=0x7f04003a;
+        public static final int size=0x7f040048;
+        public static final int spacerTextView=0x7f040038;
+        public static final int statusText=0x7f040041;
         public static final int tabMode=0x7f040007;
         public static final int terrain=0x7f040003;
         public static final int textView1=0x7f040037;
@@ -1149,19 +1163,20 @@ containing a value of this type.
         public static final int abs__search_view=0x7f030015;
         public static final int abs__simple_dropdown_hint=0x7f030016;
         public static final int activity_about=0x7f030017;
-        public static final int row=0x7f030018;
-        public static final int sherlock_spinner_dropdown_item=0x7f030019;
-        public static final int sherlock_spinner_item=0x7f03001a;
-        public static final int tab_drinks=0x7f03001b;
-        public static final int tab_locations=0x7f03001c;
-        public static final int tabs=0x7f03001d;
+        public static final int activity_location_detail=0x7f030018;
+        public static final int row=0x7f030019;
+        public static final int sherlock_spinner_dropdown_item=0x7f03001a;
+        public static final int sherlock_spinner_item=0x7f03001b;
+        public static final int tab_drinks=0x7f03001c;
+        public static final int tab_locations=0x7f03001d;
+        public static final int tabs=0x7f03001e;
     }
     public static final class menu {
         public static final int main=0x7f0c0000;
     }
     public static final class string {
         public static final int about_name=0x7f050021;
-        public static final int about_text=0x7f050026;
+        public static final int about_text=0x7f05002e;
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 
          */
         public static final int abs__action_bar_home_description=0x7f050011;
@@ -1207,8 +1222,8 @@ containing a value of this type.
         /**  Description of a share target (both in the list of such or the default share button) in a ShareActionProvider (share UI). [CHAR LIMIT=NONE] 
          */
         public static final int abs__shareactionprovider_share_with_application=0x7f05001a;
-        public static final int action_settings=0x7f050022;
-        public static final int action_settings_about=0x7f050023;
+        public static final int action_settings=0x7f050023;
+        public static final int action_settings_about=0x7f050024;
         public static final int app_name=0x7f050020;
         /**   Title for notification shown when GooglePlayServices is unavailable [CHAR LIMIT=70] 
          */
@@ -1219,6 +1234,8 @@ containing a value of this type.
         /**   Requested by string saying which app requested the notification. [CHAR LIMIT=42] 
          */
         public static final int auth_client_requested_by_msg=0x7f050010;
+        public static final int blank_text=0x7f05002d;
+        public static final int call_button_text=0x7f05002b;
         /**  Button in confirmation dialog to enable Google Play services.  Clicking it
         will direct user to application settings of Google Play services where they
         can enable it [CHAR LIMIT=40] 
@@ -1272,8 +1289,14 @@ containing a value of this type.
         find the service-side assets. [CHAR LIMIT=25] 
          */
         public static final int common_signin_button_text_long=0x7f05000d;
-        public static final int header=0x7f050025;
-        public static final int map_api_key=0x7f050024;
+        public static final int establishment_address_label=0x7f050029;
+        public static final int establishment_detail_name=0x7f050022;
+        public static final int establishment_open_label=0x7f05002a;
+        public static final int establishment_phone_number_label=0x7f050028;
+        public static final int header=0x7f050027;
+        public static final int map_api_key=0x7f050025;
+        public static final int map_api_key_debug=0x7f050026;
+        public static final int nav_button_text=0x7f05002c;
     }
     public static final class style {
         /** 

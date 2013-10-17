@@ -3,11 +3,8 @@ package com.katztech.vabc.view;
 import java.util.ArrayList;
 import java.util.List;
 
-import android.app.AlertDialog;
-import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.location.Location;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
@@ -29,7 +26,7 @@ import com.katztech.vabc.model.Establishment;
 
 //import android.widget.TextView;
 
-public class LocationsTab extends SherlockFragment {
+public class EstablishmentsTab extends SherlockFragment {
 
 	private SupportMapFragment fragment;
 	private GoogleMap map;
@@ -46,11 +43,12 @@ public class LocationsTab extends SherlockFragment {
 
 	public synchronized void setEstList(List<Establishment> estList) {
 		this.estList = estList;
-		for(Establishment currEst : estList) {
+		for(int i = 0; i < estList.size(); i++) {
+			Establishment currEst = estList.get(i);
 			map.addMarker(new MarkerOptions()
 	        .position(new LatLng(currEst.getLat(), currEst.getLon()))
-	        .title(currEst.getName())
-	        .snippet("Tap to navigate to " + currEst.getAddress()));
+	        .title(currEst.getName() + " " + i)
+	        .snippet("Tap to view details about " + currEst.getAddress()));
 		}
 	}
 
@@ -112,8 +110,6 @@ public class LocationsTab extends SherlockFragment {
 					&& location.getLongitude() < 0) { // why does my gps report
 														// first loc as indian
 														// ocean?!
-				//System.out.println("Updating: " + location.getLatitude() + ", "
-				//		+ location.getLongitude());
 				map.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(
 						location.getLatitude(), location.getLongitude()), 14.0f));
 				hasMovedToLocation = true; // only move to our current location
@@ -127,25 +123,11 @@ public class LocationsTab extends SherlockFragment {
 
 		@Override
 		public void onInfoWindowClick(Marker marker) {
-			// System.out.println("Clicked that motherfucking window!");
-			// String uri = String.format(Locale.ENGLISH, "geo:%f,%f",
-			// marker.getPosition().latitude, marker.getPosition().longitude);
-			try {
-				startActivity(new Intent(Intent.ACTION_VIEW,
-						Uri.parse("google.navigation:q="
-								+ marker.getPosition().latitude + ","
-								+ marker.getPosition().longitude)));
-			} catch (ActivityNotFoundException e) {
-				AlertDialog alertDialog = new AlertDialog.Builder(
-						LocationsTab.this.getActivity()).create();
-				alertDialog.setTitle("Error");
-				alertDialog
-						.setMessage("You don't have Google Navigation installed. Install it from the Play Store to enable routing to the selected ABC store.");
-				alertDialog.setIcon(R.drawable.ic_launcher);
-				alertDialog.show();
-			}
-			// Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
-
+			Intent locationDetailIntent = new Intent(EstablishmentsTab.this.getActivity(), EstablishmentDetailActivity.class);
+			int idx = Integer.parseInt(marker.getTitle().split(" ")[2]);
+			Establishment estFound = estList.get(idx);
+			locationDetailIntent.putExtra("location", estFound);
+			startActivity(locationDetailIntent);
 		}
 
 	}

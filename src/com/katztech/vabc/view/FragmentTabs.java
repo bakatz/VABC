@@ -74,7 +74,7 @@ public class FragmentTabs extends SherlockFragmentActivity {
 				DrinksTab.class, null);
 		mTabManager.addTab(
 				mTabHost.newTabSpec("locations").setIndicator("Locations"),
-				LocationsTab.class, null);
+				EstablishmentsTab.class, null);
 
 		if (savedInstanceState != null) {
 			mTabHost.setCurrentTabByTag(savedInstanceState.getString("tab"));

@@ -65,7 +65,6 @@ public class DrinksController {
 				try {
 					ret.append(URLEncoder.encode(name, "UTF-8"));
 				} catch (UnsupportedEncodingException e) {
-					// TODO Auto-generated catch block
 					ret.append("null");
 					e.printStackTrace();
 				}
@@ -104,8 +103,6 @@ public class DrinksController {
 		}
 		@Override
 		protected void onPostExecute(List<Drink> result) {
-
-			// System.out.println("Execution done, got our drinks, count: " + result.size());
 			DrinksAdapter drinksAdapter = (DrinksAdapter)drinksView.getListView().getAdapter();
 			if(isCancelled()) {
 				return;
@@ -121,7 +118,6 @@ public class DrinksController {
 
 			try {
 				String reqUrl = "http://bakatz.com/scripts/get_vabc_data.php?type=drinks&"+params[0].toString();
-				// System.out.println("Sending requrl: " + reqUrl);
 				if(isCancelled()) {
 					drinkList.clear();
 					return drinkList;
@@ -163,7 +159,6 @@ public class DrinksController {
 				System.out.println("Network error encoutered while retreiving data in drinks");
 			}
 			return drinkList;
-			//return false;
 		}
 	}
 }

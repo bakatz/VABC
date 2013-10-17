@@ -2,8 +2,6 @@ package com.katztech.vabc.model;
 
 import java.text.DecimalFormat;
 
-import android.R;
-
 public class Drink implements Comparable<Drink> {
 	private String displayName;
 	private double numML;

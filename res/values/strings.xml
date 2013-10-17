@@ -3,12 +3,21 @@
 
     <string translatable="false" name="app_name">VABC</string>
     <string translatable="false" name="about_name">About VABC</string>
+    <string translatable="false" name="establishment_detail_name">Establishment Details</string>
     <string translatable="false" name="action_settings">Settings</string>
     <string translatable="false" name="action_settings_about">About VABC</string>
     <string translatable="false" name="map_api_key">AIzaSyBXEVtJu6H6issGtClZltXeIqm05tiwfMU</string>
+    <string translatable="false" name="map_api_key_debug">AIzaSyCMd5hiX_8As6q2MfPO5wYaTgq7rOi3jvw</string>
     <string translatable="false" name="header">Drink</string>
+    <string translatable="false" name="establishment_phone_number_label">Phone:</string>
+    <string translatable="false" name="establishment_address_label">Address:</string>
+    <string translatable="false" name="establishment_open_label">Status:</string>
+    <string translatable="false" name="call_button_text">Call Store</string>
+    <string translatable="false" name="nav_button_text">Navigate to Store</string>
+    
+    <string translatable="false" name="blank_text">N/A</string>
     <string translatable="false" name="about_text">VABC stands for <b>V</b>irginia <b>ABC</b> Store Information.\nThis app allows you to select, filter, and search for drinks, as well as to find all ABC store locations in Virginia via the Locations tab. This is not an official Virginia ABC app, nor is this app affiliated with the aforementioned organization.\n\n
-        VABC version: 1.0.3\n
+        VABC version: 1.0.4\n
         All coding and graphics by <a href="http://bakatz.com">Ben Katz</a>\n
         All data is public domain, retreived from <a href="http://www.abc.virginia.gov">http://www.abc.virginia.gov</a>\n
         </string>

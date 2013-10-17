@@ -16,13 +16,13 @@ import org.json.JSONObject;
 
 import android.os.AsyncTask;
 import com.katztech.vabc.model.Establishment;
-import com.katztech.vabc.view.LocationsTab;
+import com.katztech.vabc.view.EstablishmentsTab;
 
 public class LocationsController {
-	private LocationsTab locView;
+	private EstablishmentsTab locView;
 	private RequestLocationsTask currTask;
 
-	public LocationsController(LocationsTab locView) {
+	public LocationsController(EstablishmentsTab locView) {
 		this.locView = locView;
 	}
 
@@ -87,8 +87,10 @@ public class LocationsController {
 						}
 						JSONObject jo = (JSONObject) ja.get(i);
 						String name = jo.getString("name");
+						String city = jo.getString("city");
 						String state = "VA";
 						String street = jo.getString("street");
+						String phoneNo = jo.getString("phone_number");
 						double lat = jo.getDouble("lat");
 						double lon = jo.getDouble("lon");
 
@@ -97,6 +99,8 @@ public class LocationsController {
 						currEs.setAddress(street);
 						currEs.setLat(lat);
 						currEs.setLon(lon);
+						currEs.setPhoneNum(phoneNo);
+						currEs.setCity(city);
 
 						locList.add(currEs);
 
