@@ -38,7 +38,6 @@
         <item>Cocktails</item>
         <item>Brandy</item>
         <item>Moonshine</item>
-        <item>Bourbon</item>
         <item>Vermouth</item>
     </string-array>
     <string-array translatable="false" name="drink_sizes_array">
